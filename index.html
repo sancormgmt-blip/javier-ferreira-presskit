@@ -251,15 +251,179 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* Mobile */
+/* ═══ MOBILE FIRST: ≤768px ═══ */
 @media(max-width:768px){
+  /* Nav */
   .nav-links{position:absolute;top:100%;left:0;right:0;background:rgba(28,28,28,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);flex-direction:column;gap:0;padding:4px 0;display:none}
   .nav-links.open{display:flex}
-  .nav-links a{font-size:13px;padding:14px 24px;display:block;border-bottom:1px solid rgba(255,255,245,.03)}
-  .nav-links a:active{background:rgba(255,255,245,.03)}
+  .nav-links a{font-size:14px;padding:16px 24px;display:block;border-bottom:1px solid rgba(255,255,245,.03);min-height:48px;display:flex;align-items:center}
+  .nav-links a:active{background:rgba(255,255,245,.04)}
   .menu-toggle{display:block}
-  .embed-grid{grid-template-columns:1fr}
+
+  /* Hero */
+  .hero{padding:90px 20px calc(32px + env(safe-area-inset-bottom,0px))}
+  .hero-monogram svg{width:36px;height:36px}
+  .hero h1{font-size:clamp(40px,13vw,64px);letter-spacing:-1px}
+  .hero .sub{font-size:9px;letter-spacing:3px;margin-bottom:20px}
+  .hero-tagline{font-size:14px;margin-bottom:16px}
+  .hero-stats{gap:16px;margin-bottom:20px}
+  .hero-stat .n{font-size:clamp(24px,7vw,36px)}
+  .hero-stat .l{font-size:7px;letter-spacing:2px}
+  .hero-cta a{padding:12px 22px;font-size:9px;letter-spacing:2px}
+
+  /* Layout */
+  .wrap{padding:0 16px}
+  .sec{padding:40px 0}
+  h2{font-size:clamp(22px,6vw,30px);margin-bottom:12px}
+  p.lead{font-size:13px;line-height:1.8;margin-bottom:12px}
+  .sec-tag{font-size:8px;letter-spacing:4px;margin-bottom:12px}
+
+  /* Gallery */
+  .gallery{gap:6px;margin:16px 0}
+  .gallery-item{border-radius:8px}
+  .gallery-item.full img{max-height:200px}
+  .gallery-caption{font-size:8px}
+
+  /* Cards */
+  .card{padding:18px;border-radius:12px;margin-bottom:10px}
+  .card-quote{padding:20px 18px;margin:16px 0}
+  .card-quote p{font-size:14px;line-height:1.7}
+  .card-quote .src{font-size:9px;margin-top:10px}
+
+  /* Rows */
+  .row{padding:7px 0;font-size:12px;gap:8px}
+  .row .k{font-size:9px;letter-spacing:1.5px}
+  .row .v{font-size:12px}
+
+  /* Stats */
+  .stats-grid{gap:8px;margin:16px 0}
+  .stat-card{padding:16px;border-radius:12px}
+  .stat-num{font-size:clamp(24px,7vw,32px)}
+  .stat-label{font-size:7px;letter-spacing:2px}
+
+  /* Bars */
+  .bar-row{margin:8px 0}
+  .bar-label{font-size:12px}
+  .bar-note{font-size:9px}
+
+  /* Impact */
+  .impact-card{padding:18px;margin:16px 0;border-radius:12px}
+  .impact-block .n{font-size:clamp(20px,6vw,28px)}
+  .impact-block .l{font-size:8px}
+
+  /* Why */
+  .why-grid{gap:10px;margin:16px 0}
+  .why-card{padding:20px;border-radius:12px}
+  .why-card .n{font-size:32px}
+  .why-card .tag{font-size:8px;letter-spacing:2px}
+  .why-card p{font-size:12px}
+
+  /* Brands */
+  .brand-logos{gap:14px;padding:12px}
+  .brand-logo{height:22px}
+
+  /* Embeds */
+  .embed-grid{grid-template-columns:1fr;gap:10px}
+  .embed-label{padding:10px 12px}
+  .embed-label .en{font-size:12px}
+  .embed-label .et{font-size:8px}
+
+  /* IG inline grid */
+  .ig-inline-grid{grid-template-columns:1fr !important}
+
+  /* Testimonials */
+  .testimonial{padding:18px;border-radius:0 12px 12px 0;margin-bottom:10px}
+  .testimonial p{font-size:13px;line-height:1.7}
+  .testimonial .author{font-size:9px}
+  .testimonial .role{font-size:8px}
+
+  /* Fit */
+  .fit-grid{gap:8px;margin:16px 0}
+  .fit-card{padding:16px;border-radius:12px}
+  .fit-card h4{font-size:14px}
+  .fit-card p{font-size:12px}
+  .fit-tag{font-size:7px}
+
+  /* Formats */
+  .fmt{padding:16px;border-radius:12px;margin-bottom:8px;gap:12px}
+  .fmt-n{font-size:22px}
+  .fmt h4{font-size:14px}
+  .fmt p{font-size:12px}
+
+  /* Release */
+  .release-card{border-radius:12px;margin:16px 0}
+  .release-info{padding:18px}
+  .release-title{font-size:22px}
+  .release-date{font-size:9px}
+
+  /* Mood tags */
+  .mood-tags{gap:5px !important;margin:10px 0 20px !important}
+  .mood-tags span{font-size:8px !important;padding:3px 10px !important;letter-spacing:1.5px !important}
+
+  /* Social */
+  .social-card{padding:14px 16px;border-radius:12px;margin-bottom:6px;gap:12px}
+  .social-icon{width:32px;height:32px;border-radius:6px}
+  .social-name{font-size:12px}
+  .social-handle{font-size:9px}
+  .social-stat{font-size:14px}
+
+  /* Collapsible */
+  .collapse-toggle{padding:14px 16px;border-radius:12px;font-size:12px}
+
+  /* CTA */
+  .cta-section{padding:36px 0}
+  .cta-card{padding:24px 18px;border-radius:14px;margin:16px 0}
+  .cta-card .name{font-size:18px}
+  .cta-card .role{font-size:8px;letter-spacing:2px;margin-bottom:12px}
+  .cta-card .email-link{font-size:14px}
+  .cta-btn{padding:12px 22px;font-size:9px;letter-spacing:2px;margin-top:12px}
+  .cta-tags{gap:6px;margin-top:12px}
+  .cta-tag{font-size:7px;padding:3px 10px}
+
+  /* Chimbita */
+  .chimbita-section{padding:24px 0}
+  .chimbita-desc{font-size:12px}
+  .chimbita-tagline{font-size:13px}
+
+  /* Monogram */
+  .jf-divider svg{width:18px;height:18px}
+
+  /* Separador */
+  .sep{margin:0}
+
+  /* Footer */
+  .footer{padding:24px 16px 40px;font-size:8px}
+
+  /* Reveal: simpler on mobile */
+  .reveal{transform:translateY(12px)}
+
+  /* Active states for tap feedback */
+  .card:active,.stat-card:active,.why-card:active,.fit-card:active,.fmt:active,.embed-card:active{transform:scale(.98);transition:transform .1s}
+
+  /* Discografia inline card */
+  .discografia-card .row .v{font-size:11px}
 }
+
+/* ═══ SMALL MOBILE: ≤400px ═══ */
+@media(max-width:400px){
+  .wrap{padding:0 14px}
+  .hero{padding:80px 14px calc(28px + env(safe-area-inset-bottom,0px))}
+  .hero h1{font-size:clamp(36px,12vw,52px)}
+  .hero-stats{gap:12px}
+  .hero-stat .n{font-size:clamp(20px,6vw,28px)}
+  .stat-num{font-size:clamp(20px,6vw,28px)}
+  .card{padding:14px}
+  .row{font-size:11px}
+  .row .k{font-size:8px}
+  .brand-logo{height:18px}
+  .brand-logos{gap:10px;padding:8px}
+  .impact-card{padding:14px}
+  .why-card .n{font-size:28px}
+  .stats-grid{gap:6px}
+  .cta-card{padding:20px 14px}
+}
+
+/* ═══ DESKTOP: ≥769px ═══ */
 @media(min-width:769px){
   .wrap{padding:0 48px;max-width:800px}
   .hero{padding:140px 48px 72px}
@@ -511,7 +675,7 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
     <!-- Instagram embeds -->
     <div style="margin-top:24px">
       <div class="sec-tag">Campa&ntilde;as &middot; Instagram</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0">
+      <div class="ig-inline-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0">
         <div class="card" style="padding:0;overflow:hidden">
           <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/C8NO4U7v_A6/" data-instgrm-version="14" style="margin:0;padding:0;border:0;width:100%">
             <a href="https://www.instagram.com/p/C8NO4U7v_A6/" target="_blank" rel="noopener" style="display:block;padding:24px;text-align:center;font-size:12px;color:var(--gris);text-decoration:none">Ver Rabanne en IG</a>
@@ -649,7 +813,7 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
     <p class="lead">Sonido envolvente, coro hipn&oacute;tico. Transici&oacute;n audaz al Trap en la segunda mitad. Influencias de Puerto Rico y Colombia con actitud de rock cl&aacute;sico.</p>
 
     <!-- Mood tags para editores de playlist -->
-    <div style="display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 24px">
+    <div class="mood-tags" style="display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 24px">
       <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding:4px 12px;border:1px solid var(--border);border-radius:20px">Dark Reggaeton</span>
       <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding:4px 12px;border:1px solid var(--border);border-radius:20px">Trap Latino</span>
       <span style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);padding:4px 12px;border:1px solid var(--border);border-radius:20px">Sensual</span>
