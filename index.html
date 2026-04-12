@@ -198,12 +198,8 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
 /* Embeds */
 .embed-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
 .embed-card{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;overflow:hidden}
-.embed-card .lazy-video{aspect-ratio:9/16;background:#111;display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative}
-.embed-card .lazy-video.loaded{cursor:default}
+.embed-card .lazy-video{aspect-ratio:9/16;background:#111;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .embed-card .lazy-video iframe{width:100%;height:100%;border:none;position:absolute;inset:0}
-.play-btn{opacity:.5;transition:opacity .3s}
-.lazy-video:hover .play-btn{opacity:.8}
-.lazy-video.loaded .play-btn{display:none}
 .embed-label{padding:12px 14px;border-top:1px solid var(--border)}
 .embed-label .en{font-size:13px;font-weight:700;color:var(--blanco)}
 .embed-label .et{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--bronce);margin-top:1px}
@@ -695,38 +691,32 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
       <p class="lead">Tap para reproducir. Contenido nativo integrado a su est&eacute;tica.</p>
       <div class="embed-grid">
         <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7545565042893245701?music_info=0&description=0&autoplay=1&loop=1" role="button" tabindex="0" aria-label="Reproducir video Jean Paul Gaultier">
-            <svg class="play-btn" width="36" height="36" viewBox="0 0 24 24" fill="#B9BFC4" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg>
+          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7545565042893245701?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Jean Paul Gaultier">
           </div>
           <div class="embed-label"><div class="en">Jean Paul Gaultier</div><div class="et">Fragancia</div></div>
         </div>
         <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7381938970495601925?music_info=0&description=0&autoplay=1&loop=1" role="button" tabindex="0" aria-label="Reproducir video Rabanne">
-            <svg class="play-btn" width="36" height="36" viewBox="0 0 24 24" fill="#B9BFC4" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg>
+          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7381938970495601925?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Rabanne">
           </div>
           <div class="embed-label"><div class="en">Rabanne</div><div class="et">Fragancia</div></div>
         </div>
         <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7257610125764988165?music_info=0&description=0&autoplay=1&loop=1" role="button" tabindex="0" aria-label="Reproducir video Diesel">
-            <svg class="play-btn" width="36" height="36" viewBox="0 0 24 24" fill="#B9BFC4" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg>
+          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7257610125764988165?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Diesel">
           </div>
           <div class="embed-label"><div class="en">Diesel</div><div class="et">Moda</div></div>
         </div>
         <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7220902827751673094?music_info=0&description=0&autoplay=1&loop=1" role="button" tabindex="0" aria-label="Reproducir video Kerastase">
-            <svg class="play-btn" width="36" height="36" viewBox="0 0 24 24" fill="#B9BFC4" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg>
+          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7220902827751673094?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Kerastase">
           </div>
           <div class="embed-label"><div class="en">Kerastase</div><div class="et">Grooming Premium</div></div>
         </div>
         <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7465771550365453573?music_info=0&description=0&autoplay=1&loop=1" role="button" tabindex="0" aria-label="Reproducir video Head and Shoulders">
-            <svg class="play-btn" width="36" height="36" viewBox="0 0 24 24" fill="#B9BFC4" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg>
+          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7465771550365453573?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Head and Shoulders">
           </div>
           <div class="embed-label"><div class="en">Head &amp; Shoulders</div><div class="et">Grooming</div></div>
         </div>
         <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7315110126430539014?music_info=0&description=0&autoplay=1&loop=1" role="button" tabindex="0" aria-label="Reproducir video Sears Nautica">
-            <svg class="play-btn" width="36" height="36" viewBox="0 0 24 24" fill="#B9BFC4" aria-hidden="true"><polygon points="5 3 19 12 5 21"/></svg>
+          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7315110126430539014?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Sears Nautica">
           </div>
           <div class="embed-label"><div class="en">Sears &times; Nautica</div><div class="et">Moda / Retail</div></div>
         </div>
@@ -972,18 +962,24 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
   var igSection=document.querySelector('.instagram-media');
   if(igSection)igObs.observe(igSection.parentElement);
 
-  // Lazy video embeds
-  document.querySelectorAll('.lazy-video').forEach(function(el){
-    function load(){
-      if(el.classList.contains('loaded'))return;
-      var src=el.dataset.src;if(!src)return;
-      var iframe=document.createElement('iframe');
-      iframe.src=src;iframe.allow='autoplay; encrypted-media';iframe.allowFullscreen=true;
-      iframe.title='Video de campana';el.appendChild(iframe);el.classList.add('loaded');
-    }
-    el.addEventListener('click',load);
-    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
-  });
+  // Auto-load videos on scroll into viewport
+  var videoIO=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting&&!e.target.dataset.loaded){
+        e.target.dataset.loaded='1';
+        var src=e.target.dataset.src;
+        if(!src)return;
+        var iframe=document.createElement('iframe');
+        iframe.src=src;
+        iframe.allow='autoplay; encrypted-media';
+        iframe.allowFullscreen=true;
+        iframe.title='Video de campana';
+        iframe.loading='lazy';
+        e.target.appendChild(iframe);
+      }
+    });
+  },{rootMargin:'200px 0px'});
+  document.querySelectorAll('.lazy-video').forEach(function(el){videoIO.observe(el);});
 })();
 </script>
 </body>
