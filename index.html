@@ -204,6 +204,12 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
 .embed-label .en{font-size:13px;font-weight:700;color:var(--blanco)}
 .embed-label .et{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--bronce);margin-top:1px}
 
+/* YouTube grid */
+.yt-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0}
+.yt-card{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.yt-card .lazy-video{aspect-ratio:16/9;background:#111;position:relative;overflow:hidden}
+.yt-card .lazy-video iframe{width:100%;height:100%;border:none;position:absolute;inset:0}
+
 /* Social */
 .social-card{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:8px;display:flex;align-items:center;gap:14px;text-decoration:none;transition:border-color .3s;touch-action:manipulation;min-height:44px}
 .social-card:active{border-color:var(--border-hover)}
@@ -431,6 +437,7 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
   .fit-grid{grid-template-columns:1fr 1fr}
   .release-card{display:grid;grid-template-columns:280px 1fr}
   .sticky-cta{display:none}
+  .yt-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -685,40 +692,33 @@ p.lead{font-size:15px;color:var(--text-soft);line-height:1.9;margin-bottom:16px}
       </div>
     </div>
 
-    <!-- Contenido real: TikTok embeds -->
+    <!-- Musica: YouTube embeds -->
     <div style="margin-top:24px">
-      <div class="sec-tag" style="color:var(--rojo)">Campa&ntilde;as &middot; TikTok</div>
-      <p class="lead">Tap para reproducir. Contenido nativo integrado a su est&eacute;tica.</p>
-      <div class="embed-grid">
-        <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7545565042893245701?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Jean Paul Gaultier">
-          </div>
-          <div class="embed-label"><div class="en">Jean Paul Gaultier</div><div class="et">Fragancia</div></div>
+      <div class="sec-tag" style="color:var(--rojo)">M&uacute;sica &middot; YouTube</div>
+      <div class="yt-grid">
+        <div class="yt-card">
+          <div class="lazy-video" data-src="https://www.youtube.com/embed/8ERFtJe2y6U?autoplay=1&mute=1&loop=1&playlist=8ERFtJe2y6U" aria-label="NOCHE Video Oficial" style="aspect-ratio:16/9"></div>
+          <div class="embed-label"><div class="en">NOCHE</div><div class="et">Video Oficial</div></div>
         </div>
-        <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7381938970495601925?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Rabanne">
-          </div>
-          <div class="embed-label"><div class="en">Rabanne</div><div class="et">Fragancia</div></div>
+        <div class="yt-card">
+          <div class="lazy-video" data-src="https://www.youtube.com/embed/H_rLW0lrdS0?autoplay=1&mute=1&loop=1&playlist=H_rLW0lrdS0" aria-label="Clack Clack Preview" style="aspect-ratio:16/9"></div>
+          <div class="embed-label"><div class="en">CLACK CLACK</div><div class="et">Preview</div></div>
         </div>
-        <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7257610125764988165?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Diesel">
-          </div>
-          <div class="embed-label"><div class="en">Diesel</div><div class="et">Moda</div></div>
+        <div class="yt-card">
+          <div class="lazy-video" data-src="https://www.youtube.com/embed/BMC_BJCD97M?autoplay=1&mute=1&loop=1&playlist=BMC_BJCD97M" aria-label="Tu Contacto" style="aspect-ratio:16/9"></div>
+          <div class="embed-label"><div class="en">TU CONTACTO</div><div class="et">ft. Palma Productions</div></div>
         </div>
-        <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7220902827751673094?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Kerastase">
-          </div>
-          <div class="embed-label"><div class="en">Kerastase</div><div class="et">Grooming Premium</div></div>
+        <div class="yt-card">
+          <div class="lazy-video" data-src="https://www.youtube.com/embed/CepCGS42SpU?autoplay=1&mute=1&loop=1&playlist=CepCGS42SpU" aria-label="Como Te Queria" style="aspect-ratio:16/9"></div>
+          <div class="embed-label"><div class="en">COMO TE QUER&Iacute;A</div><div class="et">ADONIS &middot; 2025</div></div>
         </div>
-        <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7465771550365453573?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Head and Shoulders">
-          </div>
-          <div class="embed-label"><div class="en">Head &amp; Shoulders</div><div class="et">Grooming</div></div>
+        <div class="yt-card">
+          <div class="lazy-video" data-src="https://www.youtube.com/embed/j3xHI0ZUfCk?autoplay=1&mute=1&loop=1&playlist=j3xHI0ZUfCk" aria-label="Diosa" style="aspect-ratio:16/9"></div>
+          <div class="embed-label"><div class="en">DIOSA</div><div class="et">ADONIS &middot; 2025</div></div>
         </div>
-        <div class="embed-card">
-          <div class="lazy-video" data-src="https://www.tiktok.com/player/v1/7315110126430539014?music_info=0&description=0&autoplay=1&mute=1&loop=1" aria-label="Video Sears Nautica">
-          </div>
-          <div class="embed-label"><div class="en">Sears &times; Nautica</div><div class="et">Moda / Retail</div></div>
+        <div class="yt-card">
+          <div class="lazy-video" data-src="https://www.youtube.com/embed/NudXmjcaToM?autoplay=1&mute=1&loop=1&playlist=NudXmjcaToM" aria-label="Mi Ex" style="aspect-ratio:16/9"></div>
+          <div class="embed-label"><div class="en">MI EX</div><div class="et">ADONIS &middot; 2025</div></div>
         </div>
       </div>
     </div>
